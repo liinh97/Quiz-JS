@@ -1,0 +1,25 @@
+1. Thiết kế giao diện Host [login, room, question] -> save vào Firebase.
+    - Form
+        + Login, register cho Host
+        + Tạo câu hỏi để làm bộ câu hỏi
+        + Tạo phòng chơi [sẽ chọn bộ câu hỏi đã tạo bên trên]
+
+    - Firebase
+        + Lưu tài khoản host, player {
+            id: id,
+            name: name,
+            totalPoint: totalPoint
+        }
+
+        + lưu bộ câu hỏi {
+            id: id,
+            name: name,
+            question: [a, b, c, d],
+            answer: a,
+        }
+        
+        + Lưu phòng chơi {
+            id: id,
+            player: [name, point, time],
+            question: reference -> collection/question
+        }
